@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do App</title>
+</head>
+<body>
+    
+    <section id="window">
+        <div class="container">
+            <div class="box">
+                <h2 id="title">TO-DO APP</h2>
+                <p id="dev">Developed By Sam K Thampan</p>
+                
+                    <input type="text" id="inputbox" placeholder="Add new task to your list" maxlength="15" autocomplete="off">
+                    <button type="submit" onclick="addtask()" id="submitbtn">Add</button>
+                
+            </div>
+            <div class="error">
+                <span id="error" hidden>Input Field Cannot Be Empty</span>
+            </div>
+            <div class="outputbox">
+                <!-- <h4 id="intitle">Todays List</h4> -->
+                <h4 id="intitle">Todays List<span class="closebtn" onclick="unsave()">&#128465;</span><span class="checkbtn" onclick="save()">&check;</span></h4>
+                <div id="display"></div>
+            </div>
+            <!-- <div class="outputbox">
+                <button type="submit" class="btn" onclick="save()">Save</button>
+                <button type="submit" class="btn" onclick="unsave()">Delete</button>
+            </div> -->
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
